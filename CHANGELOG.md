@@ -11,8 +11,7 @@ Make default 7.7.
 Standardise files with files in sous-chefs/repo-management
 Standardise files with files in sous-chefs/repo-management
 
-## [5.0.22](https://github.com/sous-chefs/varnish/compare/v5.0.21...v5.0.22) (2025-10-16)
-
+## 5.0.22 (2025-10-16)
 
 ### Bug Fixes
 
