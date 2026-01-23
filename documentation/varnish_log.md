@@ -1,5 +1,3 @@
-[Back to resource list](../README.md#resources)
-
 # varnish_log
 
 Configures varnishlog or varnishncsa service. You can define both logfiles by calling `varnish_log` more than once. You can install logrotate config files if you wish as well.

@@ -218,7 +218,7 @@ Known Bugs:
 
 ## 2.2.2
 
-* # 86 - Removed monkey patching of service providers
+* 86 - Removed monkey patching of service providers
 
 ## 2.2.1
 
