@@ -1,6 +1,6 @@
 name              'varnish'
 maintainer        'Sous Chefs'
-maintainer_email  'ops@yola.com'
+maintainer_email  'help@sous-chefs.org'
 license           'Apache-2.0'
 description       'Installs and configures varnish'
 version           '5.0.23'
