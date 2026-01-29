@@ -2,7 +2,7 @@
 name: ci
 
 "on":
-  pull_request:
+  pull_request_target:
   push:
     branches: [main]
 
@@ -22,17 +22,9 @@ jobs:
     strategy:
       matrix:
         os:
-          - almalinux-8
-          # - amazonlinux-2
-          - debian-10
-          - debian-11
-          - centos-7
-          - centos-stream-8
-          # - fedora-latest
-          - ubuntu-1804
           - ubuntu-2004
-          - rockylinux-8
-          # - opensuse-leap-15
+          - ubuntu-2204
+          - ubuntu-2404
         suite:
           - "varnish66"
           - "varnish70"

@@ -1,5 +1,3 @@
-[Back to resource list](../README.md#resources)
-
 # vcl_template
 
 Create vcl file at `/etc/varnish/backends.vcl` using the template at `templates/default/backends.vcl.erb` and pass it some variables:
