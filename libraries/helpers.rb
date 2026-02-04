@@ -23,7 +23,7 @@ module VarnishCookbook
       Chef::Log.debug "#{cmd_str} ran and detected varnish version: #{cmd_stdout}"
 
       matches = cmd_stdout.match(/varnish-([0-9]\.[0-9])/)
-      version_found = matches && matches.first && matches[1]
+      version_found = matches && matches[1]
       raise "Cannot parse varnish version from #{cmd_stdout}" unless version_found
 
       matches[1].to_f
