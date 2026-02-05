@@ -12,10 +12,12 @@ default['yum']['epel']['exclude'] = 'varnish' unless node['varnish']['configure'
 default['varnish']['conf_path'] = platform_family?('debian') ? '/etc/default/varnish' : '/etc/sysconfig/varnish'
 
 default['varnish']['reload_cmd'] =
-  if node['varnish']['major_version'] < 4
+  if node['varnish']['major_version'] >= 6.1
+    '/usr/sbin/varnishreload'
+  elsif node['varnish']['major_version'] < 4
     '/usr/bin/varnish_reload_vcl'
   else
-    '/usr/bin/varnishadm'
+    '/usr/sbin/varnish_reload_vcl'
   end
 
 default['varnish']['conf_source'] = 'default_systemd.erb'
