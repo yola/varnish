@@ -16,6 +16,8 @@ default['varnish']['reload_cmd'] =
     '/usr/sbin/varnishreload'
   elsif node['varnish']['major_version'] < 4
     '/usr/bin/varnish_reload_vcl'
+  elsif platform_family?('debian')
+    '/usr/share/varnish/reload-vcl'
   else
     '/usr/sbin/varnish_reload_vcl'
   end
