@@ -18,8 +18,6 @@ default['varnish']['reload_cmd'] =
     '/usr/bin/varnish_reload_vcl'
   elsif platform_family?('debian')
     '/usr/share/varnish/reload-vcl'
-  elsif platform_family?('rhel') && node['platform_version'].to_i >= 8
-    '/usr/sbin/varnishreload'
   else
     '/usr/sbin/varnish_reload_vcl'
   end
