@@ -11,14 +11,7 @@ default['varnish']['configure']['repo']['action'] = :configure
 default['yum']['epel']['exclude'] = 'varnish' unless node['varnish']['configure']['repo']['action'].to_sym == :nothing
 default['varnish']['conf_path'] = platform_family?('debian') ? '/etc/default/varnish' : '/etc/sysconfig/varnish'
 
-default['varnish']['reload_cmd'] =
-  if node['varnish']['major_version'] >= 6
-    '/usr/share/varnish/reload-vcl'
-  elsif node['varnish']['major_version'] < 4
-    '/usr/bin/varnish_reload_vcl'
-  else
-    '/usr/sbin/varnish_reload_vcl'
-  end
+default['varnish']['reload_cmd'] = '/usr/share/varnish/reload-vcl'
 
 default['varnish']['conf_source'] = 'default_systemd.erb'
 default['varnish']['conf_path'] = '/etc/systemd/system/varnish.service'
