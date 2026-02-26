@@ -12,7 +12,7 @@ default['yum']['epel']['exclude'] = 'varnish' unless node['varnish']['configure'
 default['varnish']['conf_path'] = platform_family?('debian') ? '/etc/default/varnish' : '/etc/sysconfig/varnish'
 
 default['varnish']['reload_cmd'] =
-  if node['varnish']['major_version'] >= 6.1
+  if node['varnish']['major_version'] >= 7
     '/usr/sbin/varnishreload'
   elsif node['varnish']['major_version'] < 4
     '/usr/bin/varnish_reload_vcl'
